@@ -1,7 +1,10 @@
-numpy
-pandas
-matplotlib
-nltk
-streamlit
-scikit-learn
-xgboost
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.7
+nltk>=3.9
+scikit-learn>=1.5
+xgboost>=2.0
+streamlit>=1.30
+faster-whisper[cpu]>=1.0
+wordcloud>=1.9
+xlsxwriter>=3.2

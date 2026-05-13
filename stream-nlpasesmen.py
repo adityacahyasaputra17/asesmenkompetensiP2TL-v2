@@ -120,7 +120,6 @@ else:
         st.warning("⚠️ Harap isi nama asesi sebelum memulai asesmen.")
 
 if st.session_state.riwayat_asesmen:
-    if st.button("Lihat Analisis Word Cloud"):
     st.markdown("## ☁️ Analisis Word Cloud")
 
     # Buat DataFrame riwayat

@@ -120,7 +120,7 @@ else:
     elif audio_file is not None and nama_asesi.strip() == "":
         st.warning("⚠️ Harap isi nama asesi sebelum memulai asesmen.")
 
-    st.markdown(f"========================================================================================")
+    
     st.markdown(f"========================================================================================")
 
 if st.session_state.riwayat_asesmen:

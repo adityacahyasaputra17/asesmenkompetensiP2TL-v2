@@ -56,7 +56,7 @@ if not st.session_state.logged_in:
 # === Halaman Asesmen (hanya muncul jika login berhasil) ===
 else:
     st.title("🗣️ Uji Asesmen Lisan Pegawai")
-    st.markdown(f"Selamat datang, **{st.session_state.username}**.")
+    st.markdown(f"Selamat datang, Asesor **{st.session_state.username}**.")
     st.markdown(f"Silakan rekam jawaban pegawai, sistem akan mentranskrip dan mengevaluasi kompetensi secara otomatis.")
                 
     # Input nama asesi

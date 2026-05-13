@@ -86,9 +86,6 @@ else:
     </style>
     """, unsafe_allow_html=True)
 
-    if st.button("🎙️ Mulai Rekaman / Unggah Audio"):
-        st.info("Rekaman dimulai...")
-
     if audio_file is not None and nama_asesi.strip() != "":
         # Simpan audio sementara
         with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmpfile:
@@ -106,7 +103,9 @@ else:
         st.subheader("📄 Transkrip Jawaban")
         st.write(transcript)
 
-        # Prediksi dengan pipeline
+    # Prediksi dengan pipeline
+    # Tambahkan tombol untuk memicu prediksi
+    if st.button("Lihat Hasil Prediksi"):
         with open("pipeline_asesmen.pkl", "rb") as f:
             pipeline = pickle.load(f)
         prediction = pipeline.predict([transcript])[0]

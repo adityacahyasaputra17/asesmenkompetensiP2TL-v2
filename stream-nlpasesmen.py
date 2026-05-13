@@ -60,7 +60,7 @@ else:
     st.markdown(f"Silakan rekam jawaban pegawai, sistem akan mentranskrip dan mengevaluasi kompetensi secara otomatis.")
                 
     # Input nama asesi
-    nama_asesi = st.text_input("👤 Nama Asesi yang diuji")
+    nama_asesi = st.text_input("👤 Silakan tuliskan Nama Asesi terlebih dahulu")
 
     # Input audio
     st.markdown("## 🎙️ Rekam Audio Jawaban")

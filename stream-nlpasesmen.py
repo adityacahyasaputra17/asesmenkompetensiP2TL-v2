@@ -69,7 +69,7 @@ else:
     st.markdown("""
     <style>
     div.stButton > button:first-child {
-        background-color: #ADD8E6;
+        background-color: #4169E1;
         color: white;
         font-size: 15px;
         height: 50px;

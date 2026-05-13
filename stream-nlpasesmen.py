@@ -120,6 +120,9 @@ else:
     elif audio_file is not None and nama_asesi.strip() == "":
         st.warning("⚠️ Harap isi nama asesi sebelum memulai asesmen.")
 
+    st.markdown(f"========================================================================================")
+    st.markdown(f"========================================================================================")
+
 if st.session_state.riwayat_asesmen:
     st.markdown("## ☁️ Analisis Word Cloud")
 
@@ -152,9 +155,6 @@ if st.session_state.riwayat_asesmen:
             ax.imshow(wordcloud, interpolation="bilinear")
             ax.axis("off")
             st.pyplot(fig)
-
-    st.markdown(f"========================================================================================")
-    st.markdown(f"========================================================================================")
     
     # Tampilkan riwayat asesmen
     if st.session_state.riwayat_asesmen:

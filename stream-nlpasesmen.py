@@ -63,7 +63,31 @@ else:
     nama_asesi = st.text_input("👤 Nama Asesi yang diuji")
 
     # Input audio
-    audio_file = st.audio_input("🎙️ Rekam atau unggah audio jawaban")
+    st.markdown("## 🎙️ Rekam atau Unggah Audio Jawaban")
+    audio_file = st.audio_input("▶️ Klik tombol ini untuk merekam / unggah", label_visibility="visible")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        if st.button("▶️ Mulai Rekaman", use_container_width=True):
+            st.info("Rekaman dimulai...")
+    with col2:
+        if st.button("📤 Unggah File Audio", use_container_width=True):
+            st.info("Silakan pilih file audio dari perangkat.")
+
+    st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        background-color: #007BFF;
+        color: white;
+        font-size: 20px;
+        height: 70px;
+}
+    </style>
+    """, unsafe_allow_html=True)
+
+    if st.button("🎙️ Mulai Rekaman / Unggah Audio"):
+        st.info("Rekaman dimulai...")
 
     if audio_file is not None and nama_asesi.strip() != "":
         # Simpan audio sementara

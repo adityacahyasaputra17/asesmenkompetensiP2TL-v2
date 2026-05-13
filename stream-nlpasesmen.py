@@ -64,7 +64,7 @@ else:
 
     # Input audio
     st.markdown("## 🎙️ Rekam Audio Jawaban")
-    audio_file = st.audio_input("🎙️ Klik tombol ini untuk merekam / unggah", label_visibility="visible")
+    audio_file = st.audio_input("Klik tombol ini 🎙️ untuk merekam", label_visibility="visible")
 
     st.markdown("""
     <style>

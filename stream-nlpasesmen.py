@@ -122,7 +122,6 @@ else:
 
     
     st.markdown(f"========================================================================================")
-
 if st.session_state.riwayat_asesmen:
     st.markdown("## ☁️ Analisis Word Cloud")
 

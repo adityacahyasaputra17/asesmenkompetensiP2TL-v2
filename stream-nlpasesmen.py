@@ -60,10 +60,10 @@ else:
     st.markdown(f"Silakan rekam jawaban pegawai, sistem akan mentranskrip dan mengevaluasi kompetensi secara otomatis.")
                 
     # Input nama asesi
-    nama_asesi = st.text_input("👤 Silakan tuliskan Nama Asesi terlebih dahulu")
+    nama_asesi = st.text_input("👤 Silakan tulis nama asesi terlebih dahulu")
 
     # Input audio
-    st.markdown("## 🎙️ Rekam Audio Jawaban")
+    st.markdown("## 🎙️ Rekam Audio Jawaban Asesi")
     audio_file = st.audio_input("Klik tombol ini 🎙️ untuk merekam", label_visibility="visible")
 
     st.markdown("""
@@ -84,14 +84,14 @@ else:
             audio_path = tmpfile.name
 
         # Transkripsi dengan FasterWhisper
-        st.info("⏳ Sedang melakukan transkripsi...")
+        st.info("⏳ Sedang melakukan proses transkripsi ...")
         whisper_model = WhisperModel("small", device="cpu", compute_type="int8")
         segments, info = whisper_model.transcribe(audio_path, language="id")
 
         transcript = " ".join([segment.text for segment in segments])
 
         # Tampilkan transkrip
-        st.subheader("📄 Transkrip Jawaban")
+        st.subheader("📄 Transkrip Jawaban Asesi")
         st.write(transcript)
 
     # Prediksi dengan pipeline
